@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waahnam Login</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .toggle {
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN FORM -->
+  <div id="loginForm">
+    <h2>Waahnam Login</h2>
+    <input type="text" placeholder="Mobile Number">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+
+    <div class="toggle" onclick="showRegister()">New user? Register</div>
+  </div>
+
+  <!-- REGISTER FORM -->
+  <div id="registerForm" style="display:none;">
+    <h2>Register Team</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="tel" placeholder="Mobile Number">
+    <input type="text" placeholder="Team Name">
+    <input type="text" placeholder="Captain Name">
+
+    <select>
+      <option>Select Area</option>
+      <option>Diva</option>
+      <option>Mumbra</option>
+      <option>Thane</option>
+    </select>
+
+    <!-- Waahnam Service -->
+    <select>
+      <option>Do you have bike?</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <select>
+      <option>Bike Brand</option>
+      <option>Honda</option>
+      <option>Bajaj</option>
+      <option>Yamaha</option>
+      <option>TVS</option>
+    </select>
+
+    <button>Register</button>
+
+    <div class="toggle" onclick="showLogin()">Already user? Login</div>
+  </div>
+
+</div>
+
+<script>
+function showRegister() {
+  document.getElementById("loginForm").style.display = "none";
+  document.getElementById("registerForm").style.display = "block";
+}
+
+function showLogin() {
+  document.getElementById("loginForm").style.display = "block";
+  document.getElementById("registerForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
